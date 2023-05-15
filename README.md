@@ -18,14 +18,22 @@ Este projeto demonstra como criar um webhook para receber notificações do Clic
 
 1. Clone o repositório para o seu ambiente local:
 
-``git clone <URL_DO_REPOSITÓRIO>``
+```bash
+git clone <URL_DO_REPOSITÓRIO>
+```
+
 
 2. Acesse a pasta do projeto:
 
-``cd ClickUp-Webhook``
+```bash
+cd ClickUp-Webhook
+```
 
 3. Instale as dependências do projeto:
+
+```bash
 npm install
+```
 
 4. Configure as variáveis do ClickUp:
 
@@ -40,7 +48,9 @@ const targetListId = 'id_da_lista_destino';
 
 1. Inicie o servidor:
 
+```bash
 npm start
+```
 
 2. O servidor estará em execução na porta 3000.
 
@@ -49,7 +59,9 @@ npm start
 - Baixe e instale o [Ngrok](https://ngrok.com/) em seu ambiente.
 - Abra uma nova janela do terminal e execute o seguinte comando para expor o servidor local:
 
-``ngrok http 3000``
+```bash
+ngrok http 3000
+```
 
 3. Crie um webhook no ClickUp:
 
