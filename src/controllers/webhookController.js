@@ -39,14 +39,16 @@ async function handleWebhook(req, res) {
       task.list.name === 'QA' &&
       task.status.status.toUpperCase() === 'APPROVED'
     ) {
-      // pegar task pai em dev e chamar funcao updateTask para fazer o put
-      await clickupService.updateTask(QA, createNewActivity(task));
+
+      const linkedTask = await clickupService.getTask(task.linked_tasks[0].task_id)
+
+      await clickupService.addQATagToDev(linkedTask.id, 'qa-approved');
       return res.sendStatus(200);
     }
 
     return res.sendStatus(200);
   } catch (error) {
-    console.error('Erro ao manipular webhook:', error.data);
+    console.error('Erro ao manipular webhook:', error);
     throw error;
   }
 }
