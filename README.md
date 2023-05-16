@@ -37,12 +37,15 @@ npm install
 
 4. Configure as variáveis do ClickUp:
 
-No arquivo `index.js`, atualize as seguintes variáveis com as suas informações do ClickUp:
+Configure as variaveis do clickup no arquivo .env, atualize as seguintes variáveis com as suas informações do ClickUp:
 
-```javascript
-const clickupToken = 'seu_token_do_clickup';
-const spaceId = 'id_do_seu_espaco_no_clickup';
-const targetListId = 'id_da_lista_destino';
+```env
+CLICKUP_API_KEY=
+BKO_LIST_ID=
+DEV_LIST_ID=
+MKT_LIST_ID=
+QA_LIST_ID=
+PORT=
 ```
 # Uso
 
