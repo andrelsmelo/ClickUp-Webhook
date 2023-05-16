@@ -39,6 +39,7 @@ async function handleWebhook(req, res) {
       task.list.name === 'QA' &&
       task.status.status.toUpperCase() === 'APPROVED'
     ) {
+      // pegar task pai em dev e chamar funcao updateTask para fazer o put
       await clickupService.updateTask(QA, createNewActivity(task));
       return res.sendStatus(200);
     }

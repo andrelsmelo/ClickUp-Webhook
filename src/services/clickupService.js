@@ -24,7 +24,7 @@ async function updateTask(listId, activity) {
   };
 
   try {
-    await axios.post(url, activity, { headers });
+    await axios.put(url, activity, { headers });
     console.log('Atividade atualizada com sucesso!');
   } catch (error) {
     console.error('Erro ao atualizar atividade:', error.data);
